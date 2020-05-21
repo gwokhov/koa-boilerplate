@@ -1,4 +1,5 @@
 let dbPwd = null
+const DB_USERNAME = ''
 const CLUSTER = ''
 const DB_NAME = ''
 const REMOTE_NET = ''
@@ -14,6 +15,6 @@ if (!dbPwd) {
 }
 
 module.exports = {
-  DB_URL: `mongodb+srv://<username>:${dbPwd}@${CLUSTER}-${REMOTE_NET}/${DB_NAME}?retryWrites=true&w=majority`,
+  DB_URL: `mongodb+srv://${DB_USERNAME}:${dbPwd}@${CLUSTER}-${REMOTE_NET}/${DB_NAME}?retryWrites=true&w=majority`,
   JWT_SECRET: 'jwt-secret'
 }
